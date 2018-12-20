@@ -280,6 +280,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info {
     [picker dismissViewControllerAnimated:YES completion:NULL];
     
     NSURL *referenceURL = info[UIImagePickerControllerReferenceURL];
+    
     // if it's a photo from the library, not an image from the camera
     if (referenceURL) {
         PHFetchResult* assets = [PHAsset fetchAssetsWithALAssetURLs:@[referenceURL] options:nil];
